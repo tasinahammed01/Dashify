@@ -4,6 +4,7 @@ import { RxDashboard } from "react-icons/rx";
 import { FaChevronDown } from "react-icons/fa";
 import { BsMotherboard } from "react-icons/bs";
 import { Link } from "react-router";
+import { SlCalender } from "react-icons/sl";
 
 const NavBar = ({ isNavOpen, handleNavOpen }) => {
   return (
@@ -93,6 +94,31 @@ const NavBar = ({ isNavOpen, handleNavOpen }) => {
                 </li> */}
               </ul>
             </details>
+          </div>
+        </div>
+        <div>
+          <div
+            className={`${
+              isNavOpen
+                ? "flex items-start gap-2 p-2 rounded-md cursor-pointer"
+                : ""
+            }`}
+          >
+            <SlCalender
+              onClick={handleNavOpen}
+              className={`${
+                isNavOpen
+                  ? "text-2xl text-base-content mt-1"
+                  : " text-3xl cursor-pointer mt-5"
+              }`}
+            />
+            <div className="w-full">
+              <details className="group w-full">
+                <summary className="flex justify-between items-center cursor-pointer text-base-content  p-1 font-medium list-none">
+                  <Link to="/calender">{isNavOpen && "Calender"} </Link>
+                </summary>
+              </details>
+            </div>
           </div>
         </div>
       </div>

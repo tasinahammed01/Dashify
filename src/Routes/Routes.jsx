@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router";
 import LayoutPage from "../LayoutPage/LayoutPage";
 import HomePage from "../Pages/HomePage/HomePage";
 import Analytics from "../Pages/Analytics/Analytics";
+import Calender from "../Pages/Calender/Calender";
 
 export const routes = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ export const routes = createBrowserRouter([
       {
         path: "/analytics",
         element: <Analytics />,
+      },
+      {
+        path: "/calender",
+        element: <Calender />,
       },
     ],
   },
