@@ -1,33 +1,77 @@
 import React from "react";
 import { BiSupport } from "react-icons/bi";
 import { RxDashboard } from "react-icons/rx";
-import { FaChevronDown } from "react-icons/fa"; // Added icon for custom arrow
+import { FaChevronDown } from "react-icons/fa";
 import { BsMotherboard } from "react-icons/bs";
 
-const NavBar = () => {
+const NavBar = ({ isNavOpen }) => {
   return (
-    <div className="w-64 bg-base-300 min-h-screen p-4 shadow-md">
+    <div
+      className={`transition-all duration-300 ease-in-out bg-base-300 min-h-screen p-4 shadow-md ${
+        isNavOpen ? "w-64" : "w-20"
+      }`} // Adjust width based on isNavOpen
+    >
       {/* Logo */}
       <div className="flex justify-center mb-6">
-        <img
-          className="w-full h-[100px] object-contain"
-          src="https://i.ibb.co.com/7drs5pQg/Screenshot-466-removebg-preview.png"
-          alt="Logo"
-        />
+        {isNavOpen ? (
+          <>
+            <img
+              className={`w-full h-[100px] object-contain 
+              }`} // Hide logo when navbar is collapsed
+              src="https://i.ibb.co.com/7drs5pQg/Screenshot-466-removebg-preview.png"
+              alt="Logo"
+            />
+          </>
+        ) : (
+          <>
+            <img
+              className={`w-full h-[50px] object-contain mb-5 
+              }`} // Hide logo when navbar is collapsed
+              src="https://i.ibb.co.com/6c4zvHYr/Screenshot-466-removebg-preview-1.png"
+              alt="Logo"
+            />
+          </>
+        )}
       </div>
 
       {/* Menu Section */}
       <div className="mb-6">
-        <h1 className="text-gray-400 font-bold mb-2">Menu</h1>
-        <div className="flex items-start gap-2 p-2  rounded-md cursor-pointer">
-          <RxDashboard className="text-2xl text-base-content mt-1" />
+        <h1
+          className={`text-gray-400 font-bold mb-2 ${
+            isNavOpen ? "" : "hidden"
+          }`}
+        >
+          Menu
+        </h1>{" "}
+        {/* Hide title when navbar is collapsed */}
+        <div
+          className={`${
+            isNavOpen
+              ? "flex items-start gap-2 p-2 rounded-md cursor-pointer"
+              : ""
+          }`}
+        >
+          <RxDashboard
+            className={`${
+              isNavOpen ? "text-2xl text-base-content mt-1" : " text-3xl "
+            }`}
+          />
           <div className="w-full">
             <details className="group w-full">
-              <summary className="flex justify-between items-center cursor-pointer text-base-content hover:bg-base-100 p-1 font-medium list-none">
-                Dashboard
-                <FaChevronDown className="text-sm transition-transform duration-300 group-open:rotate-180" />
+              <summary className="flex justify-between items-center cursor-pointer text-base-content  p-1 font-medium list-none">
+                {isNavOpen && "Dashboard"}{" "}
+                {/* Show text only when navbar is expanded */}
+                <FaChevronDown
+                  className={`text-sm transition-transform duration-300 group-open:rotate-180 ${
+                    isNavOpen ? "" : "hidden"
+                  }`}
+                />
               </summary>
-              <ul className="ml-2 mt-2 space-y-1">
+              <ul
+                className={`ml-2 mt-2 space-y-1 ${isNavOpen ? "" : "hidden"}`}
+              >
+                {" "}
+                {/* Hide menu items when navbar is collapsed */}
                 <li className="text-sm font-bold p-2 text-base-content hover:bg-base-100 cursor-pointer">
                   Ecommerce
                 </li>
@@ -45,16 +89,42 @@ const NavBar = () => {
 
       {/* Support Section */}
       <div className="mb-6">
-        <h1 className="text-gray-400 font-bold mb-2">Support</h1>
-        <div className="flex items-start gap-2 p-2  rounded-md cursor-pointer">
-          <BiSupport className="text-2xl text-base-content mt-1" />
+        <h1
+          className={`text-gray-400 font-bold mb-2 ${
+            isNavOpen ? "" : "hidden"
+          }`}
+        >
+          Support
+        </h1>{" "}
+        {/* Hide title when navbar is collapsed */}
+        <div
+          className={`${
+            isNavOpen
+              ? "flex items-start gap-2 p-2 rounded-md cursor-pointer"
+              : ""
+          }`}
+        >
+          <BiSupport
+            className={`${
+              isNavOpen ? "text-2xl text-base-content mt-1" : " text-3xl"
+            }`}
+          />
           <div className="w-full">
             <details className="group w-full">
-              <summary className="flex justify-between items-center cursor-pointer text-base-content hover:bg-base-100 p-1 font-medium list-none">
-                Support
-                <FaChevronDown className="text-sm transition-transform duration-300 group-open:rotate-180" />
+              <summary className="flex justify-between items-center cursor-pointer text-base-content  p-1 font-medium list-none">
+                {isNavOpen && "Support"}{" "}
+                {/* Show text only when navbar is expanded */}
+                <FaChevronDown
+                  className={`text-sm transition-transform duration-300 group-open:rotate-180 ${
+                    isNavOpen ? "" : "hidden"
+                  }`}
+                />
               </summary>
-              <ul className="ml-2 mt-2 space-y-1">
+              <ul
+                className={`ml-2 mt-2 space-y-1 ${isNavOpen ? "" : "hidden"}`}
+              >
+                {" "}
+                {/* Hide menu items when navbar is collapsed */}
                 <li className="text-sm font-bold p-2 text-base-content hover:bg-base-100 cursor-pointer">
                   Chat
                 </li>
@@ -69,16 +139,42 @@ const NavBar = () => {
 
       {/* Others Section */}
       <div>
-        <h1 className="text-gray-400 font-bold mb-2">Others</h1>
-        <div className="flex items-start gap-2 p-2  rounded-md cursor-pointer">
-          <BsMotherboard className="text-2xl text-base-content mt-1" />
+        <h1
+          className={`text-gray-400 font-bold mb-2 ${
+            isNavOpen ? "" : "hidden"
+          }`}
+        >
+          Others
+        </h1>{" "}
+        {/* Hide title when navbar is collapsed */}
+        <div
+          className={`${
+            isNavOpen
+              ? "flex items-start gap-2 p-2 rounded-md cursor-pointer"
+              : ""
+          }`}
+        >
+          <BsMotherboard
+            className={`${
+              isNavOpen ? "text-2xl text-base-content mt-1" : " text-3xl"
+            }`}
+          />
           <div className="w-full">
             <details className="group w-full">
-              <summary className="flex justify-between items-center cursor-pointer text-base-content hover:bg-base-100 p-1 font-medium list-none">
-                Others
-                <FaChevronDown className="text-sm transition-transform duration-300 group-open:rotate-180" />
+              <summary className="flex justify-between items-center cursor-pointer text-base-content  p-1 font-medium list-none">
+                {isNavOpen && "Others"}{" "}
+                {/* Show text only when navbar is expanded */}
+                <FaChevronDown
+                  className={`text-sm transition-transform duration-300 group-open:rotate-180 ${
+                    isNavOpen ? "" : "hidden"
+                  }`}
+                />
               </summary>
-              <ul className="ml-2 mt-2 space-y-1">
+              <ul
+                className={`ml-2 mt-2 space-y-1 ${isNavOpen ? "" : "hidden"}`}
+              >
+                {" "}
+                {/* Hide menu items when navbar is collapsed */}
                 <li className="text-sm font-bold p-2 text-base-content hover:bg-base-100 cursor-pointer">
                   Charts
                 </li>
