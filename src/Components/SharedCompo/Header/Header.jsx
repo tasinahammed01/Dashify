@@ -120,7 +120,7 @@ const Header = ({ isNavOpen, handleNavOpen }) => {
 
         {isToggled ? (
           <>
-            <div className="lg:hidden absolute flex  items-center justify-center gap-10">
+            <div className="lg:hidden absolute z-10 flex  items-center justify-center gap-10 left-0 top-35 py-5 bg-base-300 w-full">
               {/* Theme chaging icon */}
               <div>
                 <label className="swap swap-rotate">

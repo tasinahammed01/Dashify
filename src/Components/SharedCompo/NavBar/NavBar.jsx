@@ -8,7 +8,7 @@ const NavBar = ({ isNavOpen }) => {
   return (
     <div
       className={`transition-all duration-300 ease-in-out bg-base-300 min-h-screen p-4 shadow-md ${
-        isNavOpen ? "w-full md:w-64 md:static absolute z-10 top-35 " : "lg:block hidden w-20 md:static absolute z-10 top-35 "
+        isNavOpen ? "w-full md:w-80 md:static absolute z-10 top-35 " : "lg:block hidden w-20 md:static absolute z-10 top-35 "
       }`} // Adjust width based on isNavOpen
     >
       {/* Logo */}
