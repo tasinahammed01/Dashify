@@ -3,6 +3,7 @@ import LayoutPage from "../LayoutPage/LayoutPage";
 import HomePage from "../Pages/HomePage/HomePage";
 import Analytics from "../Pages/Analytics/Analytics";
 import Calender from "../Pages/Calender/Calender";
+import Profile from "../Pages/Profile/Profile";
 
 export const routes = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ export const routes = createBrowserRouter([
       {
         path: "/calender",
         element: <Calender />,
+      },
+      {
+        path: "/profile",
+        element: <Profile></Profile>,
       },
     ],
   },

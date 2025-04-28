@@ -6,7 +6,7 @@ import Section4 from "../../Components/AnalyticsCompo/Section4/Section4";
 
 const Analytics = () => {
   return (
-    <div className="px-3 md:px-10 py-10 space-y-10">
+    <div className=" space-y-10">
       <Section1></Section1>
       <Section2></Section2>
       <Section3></Section3>

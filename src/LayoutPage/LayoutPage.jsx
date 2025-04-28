@@ -25,7 +25,7 @@ const LayoutPage = () => {
         </div>
 
         {/* Page Content */}
-        <div className="p-4">
+        <div className="px-3 md:px-10 py-10">
           <Outlet />
         </div>
       </div>
