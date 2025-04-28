@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BarChart, Bar, ResponsiveContainer } from "recharts";
+import { BarChart, Bar, ResponsiveContainer, XAxis, YAxis, Tooltip } from "recharts";
 
 // Sample data
 const weeklyData = [
@@ -120,13 +120,13 @@ const Section2 = () => {
           <p>Visitor analytics of last 30 days</p>
         </div>
         <select
-          className="border rounded-md p-2 shadow-sm text-gray-700"
+          className="border rounded-md p-2 shadow-sm text-base-content bg-base-100"
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
         >
-          <option value="weekly">Weekly</option>
-          <option value="monthly">Monthly</option>
-          <option value="yearly">Yearly</option>
+          <option className="text-base-content" value="weekly">Weekly</option>
+          <option className="text-base-content" value="monthly">Monthly</option>
+          <option className="text-base-content" value="yearly">Yearly</option>
         </select>
       </div>
 
@@ -134,6 +134,9 @@ const Section2 = () => {
       <div className="w-full h-64">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={getData()}>
+            <XAxis dataKey="name" />
+            <YAxis />
+            <Tooltip />
             <Bar dataKey="uv" fill="#8884d8" />
           </BarChart>
         </ResponsiveContainer>

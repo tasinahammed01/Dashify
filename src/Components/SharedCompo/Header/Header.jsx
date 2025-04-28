@@ -2,8 +2,12 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router";
 
 const Header = ({ isNavOpen, handleNavOpen }) => {
-  const [isDark, setIsDark] = useState(false);
   const [isToggled, setIsToggled] = useState(false);
+
+  const [isDark, setIsDark] = useState(() => {
+    const savedTheme = localStorage.getItem("theme");
+    return savedTheme ? savedTheme === "night" : false;
+  });
 
   useEffect(() => {
     // Update the HTML data-theme attribute based on isDark
@@ -11,6 +15,8 @@ const Header = ({ isNavOpen, handleNavOpen }) => {
       "data-theme",
       isDark ? "night" : "autumn"
     );
+    // Save theme to localStorage
+    localStorage.setItem("theme", isDark ? "night" : "autumn");
   }, [isDark]);
 
   const handleThemeToggle = () => {
