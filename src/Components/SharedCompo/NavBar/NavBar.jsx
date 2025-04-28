@@ -3,6 +3,7 @@ import { BiSupport } from "react-icons/bi";
 import { RxDashboard } from "react-icons/rx";
 import { FaChevronDown } from "react-icons/fa";
 import { BsMotherboard } from "react-icons/bs";
+import { Link } from "react-router";
 
 const NavBar = ({ isNavOpen, handleNavOpen }) => {
   return (
@@ -17,21 +18,25 @@ const NavBar = ({ isNavOpen, handleNavOpen }) => {
       <div className="flex justify-center mb-6">
         {isNavOpen ? (
           <>
-            <img
-              className={`hidden lg:block w-full h-[100px] object-contain 
+            <Link to="/">
+              <img
+                className={`hidden lg:block w-full h-[100px] object-contain 
               }`} // Hide logo when navbar is collapsed
-              src="https://i.ibb.co.com/7drs5pQg/Screenshot-466-removebg-preview.png"
-              alt="Logo"
-            />
+                src="https://i.ibb.co.com/7drs5pQg/Screenshot-466-removebg-preview.png"
+                alt="Logo"
+              />
+            </Link>
           </>
         ) : (
           <>
-            <img
-              className={`hidden lg:block w-full h-[50px] object-contain mb-5 
+            <Link to="/">
+              <img
+                className={`hidden lg:block w-full h-[50px] object-contain mb-5 
               }`} // Hide logo when navbar is collapsed
-              src="https://i.ibb.co.com/6c4zvHYr/Screenshot-466-removebg-preview-1.png"
-              alt="Logo"
-            />
+                src="https://i.ibb.co.com/6c4zvHYr/Screenshot-466-removebg-preview-1.png"
+                alt="Logo"
+              />
+            </Link>
           </>
         )}
       </div>
@@ -77,15 +82,15 @@ const NavBar = ({ isNavOpen, handleNavOpen }) => {
               >
                 {" "}
                 {/* Hide menu items when navbar is collapsed */}
+                {/* <li className="text-sm font-bold p-2 text-base-content hover:bg-base-100 cursor-pointer">
+                  <Link>Ecommerce</Link>
+                </li> */}
                 <li className="text-sm font-bold p-2 text-base-content hover:bg-base-100 cursor-pointer">
-                  Ecommerce
+                  <Link to="/analytics">Analytics</Link>
                 </li>
-                <li className="text-sm font-bold p-2 text-base-content hover:bg-base-100 cursor-pointer">
-                  Analytics
-                </li>
-                <li className="text-sm font-bold p-2 text-base-content hover:bg-base-100 cursor-pointer">
-                  Marketing
-                </li>
+                {/* <li className="text-sm font-bold p-2 text-base-content hover:bg-base-100 cursor-pointer">
+                  <Link>Marketing</Link>
+                </li> */}
               </ul>
             </details>
           </div>
@@ -134,10 +139,10 @@ const NavBar = ({ isNavOpen, handleNavOpen }) => {
                 {" "}
                 {/* Hide menu items when navbar is collapsed */}
                 <li className="text-sm font-bold p-2 text-base-content hover:bg-base-100 cursor-pointer">
-                  Chat
+                  <Link>Chat</Link>
                 </li>
                 <li className="text-sm font-bold p-2 text-base-content hover:bg-base-100 cursor-pointer">
-                  Email
+                  <Link>Email</Link>
                 </li>
               </ul>
             </details>
@@ -187,13 +192,13 @@ const NavBar = ({ isNavOpen, handleNavOpen }) => {
                 {" "}
                 {/* Hide menu items when navbar is collapsed */}
                 <li className="text-sm font-bold p-2 text-base-content hover:bg-base-100 cursor-pointer">
-                  Charts
+                  <Link>Charts</Link>
                 </li>
                 <li className="text-sm font-bold p-2 text-base-content hover:bg-base-100 cursor-pointer">
-                  UI Elements
+                  <Link>UI Elements</Link>
                 </li>
                 <li className="text-sm font-bold p-2 text-base-content hover:bg-base-100 cursor-pointer">
-                  Authentication
+                  <Link>Authentication</Link>
                 </li>
               </ul>
             </details>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router";
 
 const Header = ({ isNavOpen, handleNavOpen }) => {
   const [isDark, setIsDark] = useState(false);
@@ -80,11 +81,13 @@ const Header = ({ isNavOpen, handleNavOpen }) => {
         </div>
       </div>
       <div className=" block  md:hidden ">
-        <img
-          className="w-full h-[100px] object-contain md:hidden"
-          src="https://i.ibb.co/7drs5pQg/Screenshot-466-removebg-preview.png"
-          alt="Logo"
-        />
+        <Link to="/">
+          <img
+            className="w-full h-[100px] object-contain md:hidden"
+            src="https://i.ibb.co/7drs5pQg/Screenshot-466-removebg-preview.png"
+            alt="Logo"
+          />
+        </Link>
       </div>
       <div className="lg:hidden flex items-center justify-center gap-10">
         <label className=" btn-circle swap swap-rotate">
