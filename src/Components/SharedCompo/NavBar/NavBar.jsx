@@ -8,7 +8,7 @@ const NavBar = ({ isNavOpen }) => {
   return (
     <div
       className={`transition-all duration-300 ease-in-out bg-base-300 min-h-screen p-4 shadow-md ${
-        isNavOpen ? "w-64" : "w-20"
+        isNavOpen ? "w-full md:w-64 md:static absolute z-10 top-35 " : "lg:block hidden w-20 md:static absolute z-10 top-35 "
       }`} // Adjust width based on isNavOpen
     >
       {/* Logo */}
@@ -16,7 +16,7 @@ const NavBar = ({ isNavOpen }) => {
         {isNavOpen ? (
           <>
             <img
-              className={`w-full h-[100px] object-contain 
+              className={`hidden lg:block w-full h-[100px] object-contain 
               }`} // Hide logo when navbar is collapsed
               src="https://i.ibb.co.com/7drs5pQg/Screenshot-466-removebg-preview.png"
               alt="Logo"
@@ -25,7 +25,7 @@ const NavBar = ({ isNavOpen }) => {
         ) : (
           <>
             <img
-              className={`w-full h-[50px] object-contain mb-5 
+              className={`hidden lg:block w-full h-[50px] object-contain mb-5 
               }`} // Hide logo when navbar is collapsed
               src="https://i.ibb.co.com/6c4zvHYr/Screenshot-466-removebg-preview-1.png"
               alt="Logo"
