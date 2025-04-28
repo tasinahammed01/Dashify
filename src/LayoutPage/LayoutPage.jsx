@@ -13,7 +13,7 @@ const LayoutPage = () => {
   return (
     <div className="flex w-full">
       {/* Passing the isNavOpen state to NavBar as a prop */}
-      <NavBar isNavOpen={isNavOpen} className="h-[100vh] " />
+      <NavBar isNavOpen={isNavOpen} handleNavOpen={handleNavOpen} className="h-[100vh] " />
       <div className="w-full">
         {/* Passing the isNavOpen state and handleNavOpen function to Header as props */}
         <Header isNavOpen={isNavOpen} handleNavOpen={handleNavOpen} />

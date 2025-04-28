@@ -4,11 +4,13 @@ import { RxDashboard } from "react-icons/rx";
 import { FaChevronDown } from "react-icons/fa";
 import { BsMotherboard } from "react-icons/bs";
 
-const NavBar = ({ isNavOpen }) => {
+const NavBar = ({ isNavOpen, handleNavOpen }) => {
   return (
     <div
       className={`transition-all duration-300 ease-in-out bg-base-300 min-h-screen p-4 shadow-md ${
-        isNavOpen ? "w-full md:w-80 md:static absolute z-10 top-35 " : "lg:block hidden w-20 md:static absolute z-10 top-35 "
+        isNavOpen
+          ? "w-full md:w-80 md:static absolute z-10 top-35 "
+          : "lg:block hidden w-20 md:static absolute z-10 top-35 "
       }`} // Adjust width based on isNavOpen
     >
       {/* Logo */}
@@ -52,8 +54,11 @@ const NavBar = ({ isNavOpen }) => {
           }`}
         >
           <RxDashboard
+            onClick={handleNavOpen}
             className={`${
-              isNavOpen ? "text-2xl text-base-content mt-1" : " text-3xl "
+              isNavOpen
+                ? "text-2xl text-base-content mt-1"
+                : " text-3xl cursor-pointer "
             }`}
           />
           <div className="w-full">
@@ -105,8 +110,11 @@ const NavBar = ({ isNavOpen }) => {
           }`}
         >
           <BiSupport
+            onClick={handleNavOpen}
             className={`${
-              isNavOpen ? "text-2xl text-base-content mt-1" : " text-3xl"
+              isNavOpen
+                ? "text-2xl text-base-content mt-1"
+                : " text-3xl cursor-pointer"
             }`}
           />
           <div className="w-full">
@@ -155,8 +163,11 @@ const NavBar = ({ isNavOpen }) => {
           }`}
         >
           <BsMotherboard
+            onClick={handleNavOpen}
             className={`${
-              isNavOpen ? "text-2xl text-base-content mt-1" : " text-3xl"
+              isNavOpen
+                ? "text-2xl text-base-content mt-1"
+                : " text-3xl cursor-pointer"
             }`}
           />
           <div className="w-full">
