@@ -6,7 +6,7 @@ import { BsMotherboard } from "react-icons/bs";
 
 const NavBar = () => {
   return (
-    <div className="w-64 bg-white min-h-screen p-4 shadow-md">
+    <div className="w-64 bg-base-300 min-h-screen p-4 shadow-md">
       {/* Logo */}
       <div className="flex justify-center mb-6">
         <img
@@ -20,21 +20,21 @@ const NavBar = () => {
       <div className="mb-6">
         <h1 className="text-gray-400 font-bold mb-2">Menu</h1>
         <div className="flex items-start gap-2 p-2  rounded-md cursor-pointer">
-          <RxDashboard className="text-2xl text-gray-600 mt-1" />
+          <RxDashboard className="text-2xl text-base-content mt-1" />
           <div className="w-full">
             <details className="group w-full">
-              <summary className="flex justify-between items-center cursor-pointer text-gray-800 hover:bg-gray-100 p-1 font-medium list-none">
+              <summary className="flex justify-between items-center cursor-pointer text-base-content hover:bg-base-100 p-1 font-medium list-none">
                 Dashboard
                 <FaChevronDown className="text-sm transition-transform duration-300 group-open:rotate-180" />
               </summary>
               <ul className="ml-2 mt-2 space-y-1">
-                <li className="text-sm font-bold p-2 text-gray-600 hover:bg-gray-200 cursor-pointer">
+                <li className="text-sm font-bold p-2 text-base-content hover:bg-base-100 cursor-pointer">
                   Ecommerce
                 </li>
-                <li className="text-sm font-bold p-2 text-gray-600 hover:bg-gray-200 cursor-pointer">
+                <li className="text-sm font-bold p-2 text-base-content hover:bg-base-100 cursor-pointer">
                   Analytics
                 </li>
-                <li className="text-sm font-bold p-2 text-gray-600 hover:bg-gray-200 cursor-pointer">
+                <li className="text-sm font-bold p-2 text-base-content hover:bg-base-100 cursor-pointer">
                   Marketing
                 </li>
               </ul>
@@ -47,18 +47,18 @@ const NavBar = () => {
       <div className="mb-6">
         <h1 className="text-gray-400 font-bold mb-2">Support</h1>
         <div className="flex items-start gap-2 p-2  rounded-md cursor-pointer">
-          <BiSupport className="text-2xl text-gray-600 mt-1" />
+          <BiSupport className="text-2xl text-base-content mt-1" />
           <div className="w-full">
             <details className="group w-full">
-              <summary className="flex justify-between items-center cursor-pointer text-gray-800 hover:bg-gray-100 p-1 font-medium list-none">
+              <summary className="flex justify-between items-center cursor-pointer text-base-content hover:bg-base-100 p-1 font-medium list-none">
                 Support
                 <FaChevronDown className="text-sm transition-transform duration-300 group-open:rotate-180" />
               </summary>
               <ul className="ml-2 mt-2 space-y-1">
-                <li className="text-sm font-bold p-2 text-gray-600 hover:bg-gray-200 cursor-pointer">
+                <li className="text-sm font-bold p-2 text-base-content hover:bg-base-100 cursor-pointer">
                   Chat
                 </li>
-                <li className="text-sm font-bold p-2 text-gray-600 hover:bg-gray-200 cursor-pointer">
+                <li className="text-sm font-bold p-2 text-base-content hover:bg-base-100 cursor-pointer">
                   Email
                 </li>
               </ul>
@@ -71,21 +71,21 @@ const NavBar = () => {
       <div>
         <h1 className="text-gray-400 font-bold mb-2">Others</h1>
         <div className="flex items-start gap-2 p-2  rounded-md cursor-pointer">
-          <BsMotherboard className="text-2xl text-gray-600 mt-1" />
+          <BsMotherboard className="text-2xl text-base-content mt-1" />
           <div className="w-full">
             <details className="group w-full">
-              <summary className="flex justify-between items-center cursor-pointer text-gray-800 hover:bg-gray-100 p-1 font-medium list-none">
+              <summary className="flex justify-between items-center cursor-pointer text-base-content hover:bg-base-100 p-1 font-medium list-none">
                 Others
                 <FaChevronDown className="text-sm transition-transform duration-300 group-open:rotate-180" />
               </summary>
               <ul className="ml-2 mt-2 space-y-1">
-                <li className="text-sm font-bold p-2 text-gray-600 hover:bg-gray-200 cursor-pointer">
+                <li className="text-sm font-bold p-2 text-base-content hover:bg-base-100 cursor-pointer">
                   Charts
                 </li>
-                <li className="text-sm font-bold p-2 text-gray-600 hover:bg-gray-200 cursor-pointer">
+                <li className="text-sm font-bold p-2 text-base-content hover:bg-base-100 cursor-pointer">
                   UI Elements
                 </li>
-                <li className="text-sm font-bold p-2 text-gray-600 hover:bg-gray-200 cursor-pointer">
+                <li className="text-sm font-bold p-2 text-base-content hover:bg-base-100 cursor-pointer">
                   Authentication
                 </li>
               </ul>
