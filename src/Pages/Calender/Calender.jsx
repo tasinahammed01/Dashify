@@ -14,7 +14,7 @@ const Calender = () => {
   // Fetch events using fetch API
   const fetchEvents = async () => {
     try {
-      const response = await fetch("https://dashifybackend-production.up.railway.app");
+      const response = await fetch("https://dashifybackend-production.up.railway.app/events");
       if (!response.ok) {
         throw new Error("Failed to fetch events");
       }
@@ -33,7 +33,7 @@ const Calender = () => {
         note: note,
       };
 
-      const response = await fetch("https://dashifybackend-production.up.railway.app", {
+      const response = await fetch("https://dashifybackend-production.up.railway.app/events", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -75,7 +75,7 @@ const Calender = () => {
       // If the user confirms, send the DELETE request
       if (result.isConfirmed) {
         const response = await fetch(
-          `https://dashifybackend-production.up.railway.app/${eventId}`,
+          `https://dashifybackend-production.up.railway.app/events/${eventId}`,
           {
             method: "DELETE",
           }
