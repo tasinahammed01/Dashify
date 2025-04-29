@@ -5,6 +5,7 @@ import Analytics from "../Pages/Analytics/Analytics";
 import Calender from "../Pages/Calender/Calender";
 import Profile from "../Pages/Profile/Profile";
 import Tasks from "../Pages/Tasks/Tasks";
+import Email from "../Pages/Email/Email";
 
 export const routes = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ export const routes = createBrowserRouter([
       {
         path: "/tasks",
         element: <Tasks> </Tasks>,
+      },
+      {
+        path: "/email",
+        element: <Email></Email>,
       },
     ],
   },

@@ -220,7 +220,7 @@ const NavBar = ({ isNavOpen, handleNavOpen }) => {
                   <Link>Chat</Link>
                 </li>
                 <li className="text-sm font-bold p-2 text-base-content hover:bg-base-100 cursor-pointer">
-                  <Link>Email</Link>
+                  <Link to="/email">Email</Link>
                 </li>
               </ul>
             </details>
