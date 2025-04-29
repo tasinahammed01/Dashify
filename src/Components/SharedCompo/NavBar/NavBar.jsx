@@ -217,7 +217,7 @@ const NavBar = ({ isNavOpen, handleNavOpen }) => {
                 {" "}
                 {/* Hide menu items when navbar is collapsed */}
                 <li className="text-sm font-bold p-2 text-base-content hover:bg-base-100 cursor-pointer">
-                  <Link>Chat</Link>
+                  <Link to="/chat">Chat</Link>
                 </li>
                 <li className="text-sm font-bold p-2 text-base-content hover:bg-base-100 cursor-pointer">
                   <Link to="/email">Email</Link>

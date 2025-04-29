@@ -1,9 +1,10 @@
 import React from 'react';
+import Analytics from '../Analytics/Analytics';
 
 const HomePage = () => {
     return (
         <div>
-            this is HomePage
+            <Analytics></Analytics>
         </div>
     );
 };
