@@ -23,7 +23,7 @@ const Profile = () => {
   } = useForm();
 
 
-  const onSubmit = (data, e) => {
+  const onSubmit = (data) => {
     e.preventDefault();
     const formData = new FormData(data.target);
     const userData = {

@@ -4,6 +4,7 @@ import HomePage from "../Pages/HomePage/HomePage";
 import Analytics from "../Pages/Analytics/Analytics";
 import Calender from "../Pages/Calender/Calender";
 import Profile from "../Pages/Profile/Profile";
+import Tasks from "../Pages/Tasks/Tasks";
 
 export const routes = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ export const routes = createBrowserRouter([
       {
         path: "/profile",
         element: <Profile></Profile>,
+      },
+      {
+        path: "/tasks",
+        element: <Tasks> </Tasks>,
       },
     ],
   },
